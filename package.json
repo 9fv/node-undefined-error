@@ -1,0 +1,66 @@
+{
+  "name": "@9fv.io/undefined-error",
+  "version": "1.0.0",
+  "description": "An exception class to throw undefined error.",
+  "main": "lib/undefined-error.js",
+  "scripts": {
+    "test": "nyc mocha",
+    "lint": "node ./node_modules/standard/bin/cmd.js --fix",
+    "docs": "node ./node_modules/gulp/bin/gulp.js docs",
+    "coverage": "npm run test && nyc report --reporter=text-lcov | coveralls",
+    "precommit-msg": "echo 'Pre-commit checks...' && exit 0"
+  },
+  "pre-commit": [
+    "precommit-msg",
+    "lint",
+    "test",
+    "coverage"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/9fv/node-undefined-error.git"
+  },
+  "keywords": [
+    [
+      "node",
+      "javascript",
+      "microlibrary",
+      "exception",
+      "error",
+      "class",
+      "oop",
+      "throw",
+      "undefined",
+      "9fv",
+      "9fv.io"
+    ]
+  ],
+  "author": "SAS 9 Février <contact@9fevrier.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/9fv/node-undefined-error/issues"
+  },
+  "homepage": "https://github.com/9fv/node-undefined-error#readme",
+  "devDependencies": {
+    "JSONPath": "^0.11.2",
+    "coveralls": "^3.0.0",
+    "current-git-branch": "^1.0.1",
+    "fs-then-native": "^2.0.0",
+    "gulp": "^3.9.1",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-mustache-plus": "^1.0.1",
+    "gulp-rename": "^1.2.2",
+    "jsdoc-to-markdown": "^4.0.1",
+    "mocha": "^5.0.1",
+    "nyc": "^11.4.1",
+    "pre-commit": "^1.2.2",
+    "require-dir": "^1.0.0",
+    "should": "^13.2.1",
+    "standard": "^11.0.0",
+    "github-uri-https-parser": "^0.1.1-alpha1"
+  },
+  "dependencies": {
+    "@9fv.io/extended-error": "^1.0.0",
+    "lodash": "^4.17.5"
+  }
+}
